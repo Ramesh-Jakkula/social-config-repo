@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: ${USER_SERVICE_URL:http://localhost:8081}
+          predicates:
+            - Path=/api/users/**,/api/auth/**,/internal/users/**
+        - id: post-service
+          uri: ${POST_SERVICE_URL:http://localhost:8082}
+          predicates:
+            - Path=/api/posts/**
+        - id: feed-service
+          uri: ${FEED_SERVICE_URL:http://localhost:8083}
+          predicates:
+            - Path=/api/feed/**
+        - id: notification-service
+          uri: ${NOTIFICATION_SERVICE_URL:http://localhost:8084}
+          predicates:
+            - Path=/api/notifications/**
