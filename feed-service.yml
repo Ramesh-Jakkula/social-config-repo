@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+feign:
+  client:
+    config:
+      user-service:
+        connect-timeout: 1000
+        read-timeout: 2000
+      post-service:
+        connect-timeout: 1000
+        read-timeout: 2000
