@@ -1,6 +1,6 @@
 app:
   jwt:
-    secret: ${JWT_SECRET:local-dev-secret-key-for-social-platform-must-be-at-least-256-bits-long!}
+    secret: ${JWT_SECRET:BRfGQcy+vGYTMvJfyop45BnjVnI841wQC6+jfXERtqI=}
     access-ttl-seconds: 900
 
 spring:
